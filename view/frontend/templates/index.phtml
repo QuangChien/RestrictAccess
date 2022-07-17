@@ -1,0 +1,25 @@
+<?php
+/*
+ * @author  Tigren Solutions <info@tigren.com>
+ * @copyright Copyright (c) 2022 Tigren Solutions <https://www.tigren.com>. All rights reserved.
+ * @license  Open Software License (“OSL”) v. 3.0
+ */
+
+/* @var $block Magento\Framework\View\Element\Template */
+?>
+<?php
+$helper = $this->helper("Tigren\RestrictAccess\Helper\Data");
+$errorMessage = $helper->getErrorMessage();
+?>
+<div style="display: flex; align-items: center; justify-content: center; min-height: 650px">
+    <div style="text-align: center; width: 58%">
+        <p style="font-size: 24px; font-weight: 700; margin-bottom: 20px">
+        <?php if(empty($errorMessage)) :?>
+            The website is only available as a link from the other website.
+        <?php else: ?>
+            <?= $errorMessage ?>
+        <?php endif; ?>
+        </p>
+        <img src="<?= $block->getViewFileUrl('Tigren_RestrictAccess::images/images_error.png')?>" width="40%">
+    </div>
+</div>

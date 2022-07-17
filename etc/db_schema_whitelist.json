@@ -1,0 +1,11 @@
+{
+    "tigren_access_token": {
+        "column": {
+            "token_id": true,
+            "token_value": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}
